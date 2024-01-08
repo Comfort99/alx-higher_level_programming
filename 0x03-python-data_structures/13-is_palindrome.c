@@ -1,19 +1,22 @@
 #include "lists.h"
 /**
- * count_nodes - Function to count the number of nodes in the linked list
+ * reverse_list - Reverses a linked list
  * @head: points to the first node in the list
  * Return: number of nodes
  */
-int count_nodes(listint_t *head)
+listint_t *reverse_list(listint_t *head)
 {
-	int count = 0;
+	listint_t *prev = NULL;
+	listint_t *next = NULL;
 
 	while (head != NULL)
 	{
-		count++;
-		head = head->next;
+		next = head->next;
+		head->next = prev;
+		prev = head;
+		head = next;
 	}
-	return (count);
+	return (prev);
 }
 /**
  * is_palindrome - checks if the given linked list is a palindrome or not
@@ -22,33 +25,31 @@ int count_nodes(listint_t *head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp = *head;
-	int *stack;
-	int top = 0;
+	listint_t *slow = *head;
+	listint_t *fast = *head;
+	listint_t *second_half, *prev_slow = *head;
 
 	if (head == NULL || *head == NULL)
-        return (1);
-	top = count_nodes(*head);
-	stack = (int *)malloc(top * sizeof(int));if (stack == NULL)
+		return (1);
+	while (fast != NULL && fast->next != NULL)
 	{
-		fprintf(stderr, "Failed to allocate memory for stack\n");
-		return (0);
+		fast = fast->next->next;
+		prev_slow = slow;
+		slow = slow->next;
 	}
-	while (temp != NULL)
+	if (fast != NULL)
 	{
-		stack[--top] = temp->n;
-		temp = temp->next;
+		slow = slow->next;
 	}
-	temp = *head;
-	while (temp != NULL)
+	second_half = slow;
+	prev_slow->next = NULL;
+	second_half = reverse_list(second_half);
+	while (*head != NULL && second_half != NULL)
 	{
-		if (temp->n != stack[top++])
-		{
-			free(stack);
+		if ((*head)->n != second_half->n)
 			return (0);
-		}
-		temp = temp->next;
+		*head = (*head)->next;
+		second_half = second_half->next;
 	}
-	free(stack);
 	return (1);
 }
