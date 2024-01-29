@@ -92,4 +92,3 @@ class Rectangle:
 
         Returns:
             rectangle area
-
