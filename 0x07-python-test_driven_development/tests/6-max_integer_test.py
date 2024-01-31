@@ -15,7 +15,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_neg_numbers(self):
         self.assertEqual(max_integer([-1, -2, -3]), -1)
 
-    def test_one_integer_in_a_list(self)
+    def test_one_integer_in_a_list(self):
         self.assertEqual(max_integer([1]), 1)
 
     def test_empty_list(self):
@@ -39,10 +39,10 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([i * 5 for i in my_list]), 25)
 
     def test_zero_in_list(self):
-        self.assertEqual([0, 0], 0]
+        self.assertEqual(max_integer([0, 0]), 0)
 
     def test_character_in_list(self):
-        with self_assertRaise(TypeError):
+        with self.assertRaises(TypeError):
             max_integer([0, '8'])
 
     def test_tuple_in_a_list(self):

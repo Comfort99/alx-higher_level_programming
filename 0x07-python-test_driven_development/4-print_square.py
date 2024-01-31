@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
 
-Function that prints a sqaure of the character #
-
+Function that prints a sqaure of the character
 """
 
 def print_square(size):
@@ -17,7 +16,6 @@ def print_square(size):
                 raise ValueError(size must be greater or equal to 0)
     
     Print the output
-
     """
 
     if not isinstance(size, int):
