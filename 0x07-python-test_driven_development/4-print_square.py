@@ -15,7 +15,7 @@ def print_square(size):
 
     if size is less than 0:
                 raise ValueError(size must be greater or equal to 0)
- 
+
     Print the output
     """
 
