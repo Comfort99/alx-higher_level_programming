@@ -5,6 +5,7 @@ function that adds two integers of floats
 
 """
 
+
 def add_integer(a, b=98):
     """
 

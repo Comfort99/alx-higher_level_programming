@@ -5,15 +5,15 @@ function that prints my name is <first name> <last name>
 
 """
 
+
 def say_my_name(first_name, last_name=""):
-    """ 
-    Args:
+    """ Args:
         first_name
         last_name
-    
+
     Check if the first_name and last_name are strings
-                                Raise:
-                                    TypeError(first_name/last_name must be a string)
+                    Raise:
+                        TypeError(first_name/last_name must be a string)
     Print the output
     """
 
