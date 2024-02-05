@@ -13,6 +13,7 @@ class Rectangle(BaseGeometry):
     """
     child class to inherit from parent class(Geometry)
     """
+
     def __init__(self, width, height):
         """
         args:
