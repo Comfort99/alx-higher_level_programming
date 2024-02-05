@@ -14,7 +14,7 @@ class Rectangle(BaseGeometry):
     class that inherits from BaseGeometry
     """
 
-    def __int__(self, width, height):
+    def __init__(self, width, height):
         """
         method called you when create a new class
         args:
