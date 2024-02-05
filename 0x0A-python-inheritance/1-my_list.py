@@ -7,6 +7,10 @@ module that sort the list
 
 
 class MyList(list):
+    """
+    Class Mylist
+    """
+
     def print_sorted(self):
         """
         class that inherits from list
