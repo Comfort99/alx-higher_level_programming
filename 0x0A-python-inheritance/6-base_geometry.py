@@ -7,6 +7,9 @@ Module Geometery
 
 
 class BaseGeometry:
+    """
+    Class Geometry
+    """
     def area(self):
         """
         Public instance

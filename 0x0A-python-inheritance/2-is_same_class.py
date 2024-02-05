@@ -13,7 +13,7 @@ def is_same_class(obj, a_class):
     args:
         obj - to be compared
         a_class - to be compared with
- 
+
     Return:
         True or False
     """

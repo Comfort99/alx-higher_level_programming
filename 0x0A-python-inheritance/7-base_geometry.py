@@ -7,6 +7,9 @@ Module Geometry
 
 
 class BaseGeometry:
+    """
+    Parent Class
+    """
     def area(self):
         """
         instance raise Exception
