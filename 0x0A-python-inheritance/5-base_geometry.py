@@ -7,4 +7,7 @@ Module Geometry
 
 
 class BaseGeometry:
+    """
+    Class Base Geometry
+    """
     pass
