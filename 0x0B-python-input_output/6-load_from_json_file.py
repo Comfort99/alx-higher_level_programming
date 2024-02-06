@@ -11,10 +11,10 @@ import json
 
 def load_from_json_file(filename):
     """
-    Fike that creates an object from a "JSON file"
+    File that creates an object from a "JSON file"
     arg:
         file: fo be serialized
     """
 
-    with open(filename, 'r', encodind="utf-8") as f:
+    with open(filename, 'r') as f:
         return json.load(f)
