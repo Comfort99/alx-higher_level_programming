@@ -6,6 +6,9 @@ Module Input/Output
 """
 
 
+import json
+
+
 def load_from_json_file(filename):
     """
     Fike that creates an object from a "JSON file"
