@@ -34,7 +34,7 @@ class Student:
                     my_dict.update({elem: self.__dict__[elem]})
             return my_dict
         return self.__dict__
- 
+
     def reload_from_json(self, json):
         """
         to replaces all the attributes
