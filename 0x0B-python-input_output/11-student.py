@@ -28,14 +28,13 @@ class Student:
         """
 
         my_dict = dict()
-        if type(attrs) is list and all(type(elem) is str for elem is attrs):
+        if attrs and all(isinstance(elem, str) for elem in attrs):
             for elem in attrs:
                 if elem in self.__dict__:
-                    my_dict.update({elem: self.__dict__[elem])
+                    my_dict.update({elem: self.__dict__[elem]})
             return my_dict
-         return self.__dict__.copy()
-
-
+        return self.__dict__
+ 
     def reload_from_json(self, json):
         """
         to replaces all the attributes

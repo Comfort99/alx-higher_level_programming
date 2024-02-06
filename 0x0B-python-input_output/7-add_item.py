@@ -15,6 +15,10 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
 def add_item(args, filename):
+    """
+    adds a new item
+    """
+
     if (os.path.exists(filename)):
         content = load_from_json(filename)
 
