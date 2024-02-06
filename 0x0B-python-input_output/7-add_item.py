@@ -13,15 +13,19 @@ import os.path
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-filename = "add_items.json"
 
-my_list = []
+def add_item(args, filename):
+    if (os.path.exists(filename)):
+        content = load_from_json(filename)
 
-if os.path.exists(filename) and os.path.getsize(filename) > 0:
-    my_list = load_from_json_file(filename)
+    else:
+        content = []
 
-if len(sys.argv) > 1:
-    for elem in sys.argv[1:]:
-        Filename.append(element)
+    content.extend(args)
+    save_to_json(content, filename)
 
-save_to_json_file(my_list, filename)
+
+if __name__== "__main__":
+    args = sys.args[1:]
+    filename = "add_item.json"
+    add_item(args,filename)
