@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-
-Module Input/Output
+"""Module 7 -add_item
+Adds all arguments to a python list and then saves to file
 
 """
 
