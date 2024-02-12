@@ -28,7 +28,7 @@ class Base:
         assign the new value to 'id'.
         """
 
-        if id is not None:
+        if id:
             self.id = id
         else:
             Base.__nb_objects += 1
