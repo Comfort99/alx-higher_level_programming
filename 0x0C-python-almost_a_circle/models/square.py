@@ -27,7 +27,7 @@ class Square(Rectangle):
         return custom string representation
         """
 
-        return f"[Square] ({self.id}) {self.x}/{self.y} -"\
+        return f"[Square] ({self.id}) {self.x}/{self.y} - "\
             f"{self.size}"
 
     @property

@@ -176,7 +176,7 @@ class Rectangle(Base):
             if num_args == 4:
                 self.id, self.width, self.height, self.x = args
             if num_args == 5:
-                self.id, self.width, self.height, self.y = args
+                self.id, self.width, self.height, self.x, self.y = args
             else:
                 pass
 
