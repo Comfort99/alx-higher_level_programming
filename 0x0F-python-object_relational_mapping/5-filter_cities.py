@@ -17,8 +17,8 @@ if __name__ == "__main__":
         host="localhost")
     cur = db.cursor()
     my_cities = """
-    SELECT cities.id, cities.name FROM cities
-    INNER JOIN states
+    SELECT cities.name FROM cities
+    JOIN states
     ON cities.state_id = states.id
     WHERE states.name = %s
     ORDER BY cities.id ASC
@@ -26,5 +26,7 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
     cur.execute(my_cities, (state_name,))
     cities = cur.fetchall()
+    var = ""
     for city in cities:
-        print(", ".join(city[1] for city in cities))
+        var += f"{city[0]}, "
+    print(var.rstrip(", "))

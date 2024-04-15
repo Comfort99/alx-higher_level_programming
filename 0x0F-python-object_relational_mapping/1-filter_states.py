@@ -15,7 +15,11 @@ if __name__ == "__main__":
         db=sys.argv[3],
         host="localhost")
     cur = db.cursor()
-    create_name_query = "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id"
+    create_name_query = """
+    SELECT * FROM states
+    WHERE BINARY name
+    LIKE 'N%' ORDER BY id
+    """
     cur.execute(create_name_query)
     states = cur.fetchall()
     for state in states:
