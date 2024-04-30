@@ -11,6 +11,7 @@ import sys
 
 if __name__ == "__main__":
     url = sys.agv[1]
+    req = urllib.request.Request(url)
 
     try:
         with urllib.request.urlopen(url) as response:
@@ -18,4 +19,4 @@ if __name__ == "__main__":
             print(content)
  
     except error.HTTPError as err:
-        print(f"Error code: {err.status}")
+        print(f"Error code: {err.code}")
