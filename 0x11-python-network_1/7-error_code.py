@@ -12,7 +12,7 @@ if __name__ == "__main__":
     url = sys.argv[1]
 
     response = requests.get(url)
-    status = response.raise_for_status()
+    status = response.status_code()
 
     if status >= 400:
         print(f"Error code: {status}")

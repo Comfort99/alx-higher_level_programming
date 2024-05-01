@@ -10,11 +10,11 @@ import sys
 
 
 if __name__ == "__main__":
-    url = sys.agv[1]
-    req = urllib.request.Request(url)
+    url = sys.argv[1]
+    req = request.Request(url)
 
     try:
-        with urllib.request.urlopen(url) as response:
+        with request.urlopen(url) as response:
             content = response.read().decode('utf-8')
             print(content)
  
